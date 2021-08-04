@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 type FeatureProps = {
   children?: ReactNode;
   title?: string;
-  img: string;
+  img?: string;
 }
 
 export default function Feature({children, title, img}: FeatureProps) {

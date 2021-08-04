@@ -2,13 +2,13 @@ import { render, screen } from "@testing-library/react"
 import Feature from "./Feature";
 
 it('renders the correct titel', () => {
-  render(<Feature img="" title="Test 123"></Feature>);
+  render(<Feature title="Test 123"></Feature>);
 
   expect(screen.getByRole('heading')).toHaveTextContent('Test 123');
 });
 
 it('renders its children', () => {
-  render(<Feature img="">test 123</Feature>);
+  render(<Feature>test 123</Feature>);
 
   expect(screen.getByText('test 123')).toBeInTheDocument();
 });
