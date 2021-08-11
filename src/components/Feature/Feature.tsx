@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import styles from './Feature.module.scss';
 import ReactMarkdown from 'react-markdown';
 
@@ -7,10 +7,10 @@ type FeatureProps = {
   summaryPath?: string;
   detailsPath?: string;
   img?: string;
-  left?: boolean;
+  link?: string;
 }
 
-export default function Feature({summaryPath, detailsPath, img="500x500.jpg", left=false}: FeatureProps) {
+export default function Feature({summaryPath, detailsPath, img="500x500.jpg", link}: FeatureProps) {
   const [summary, setSummary] = useState('');
   const [details, setDetails] = useState('');
 
@@ -22,19 +22,27 @@ export default function Feature({summaryPath, detailsPath, img="500x500.jpg", le
     if(detailsPath) fetch(detailsPath).then(r => r.text()).then(text => setDetails(text));
   }, [detailsPath]);
 
-  const imageColumn = (
-    <Col md="5" className={styles['img-container']}>
-      <img src={img} alt=""  className={styles['img']}/>
-    </Col>
-  );
-  
   return (
-    <Row>
-      {left ? imageColumn : undefined}
-      <Col md="7">
-        <ReactMarkdown>{summary}</ReactMarkdown>
-      </Col>
-      {left ? undefined : imageColumn}
-    </Row>
+    <Card className={styles.card}>
+      <img src={img} alt=""  className={`${styles.img} card-img-top`} />
+      <div className={`${styles.body} card-body`}>
+        <div className={styles.content}>
+          <ReactMarkdown>{summary}</ReactMarkdown>
+        </div>
+        <div className={styles.bottom}>
+          {
+            link  !== undefined &&
+            <a 
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >Demo</a>
+          }
+
+          {detailsPath !== undefined && <Button>Details</Button>}
+        </div>
+      </div>
+    </Card>
   );
 }

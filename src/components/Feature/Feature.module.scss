@@ -1,3 +1,20 @@
+.card {
+ height: 100%;
+}
+
+.body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
 .img-container {
   display: flex;
   justify-content: center;
