@@ -1,2 +1,0 @@
-# Sorting Algorithm Visualizer
-The Sorting Algorithm Visualizer (SAV) is a Web-App that lets users explore popular inplace sorting algorithms. Users can choose a data preset and step through the algorithms at different speeds, using variable amounts of values to sort. 
