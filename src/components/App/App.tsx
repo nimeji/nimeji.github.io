@@ -13,7 +13,7 @@ function App() {
         {
           websites.map((website, i) => (
             <Col key={i} lg={4} className="py-2">
-              <Feature summaryPath={website.summary} img={website.img} demoLink={website.demoLink} ghLink={website.ghLink} detailsPath={website.details} />
+              <Feature content={website.content} images={website.images} demo={website.demo} github={website.github} />
             </Col>
           ))
         }

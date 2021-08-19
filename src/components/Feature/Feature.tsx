@@ -1,67 +1,51 @@
 import { useEffect, useState } from "react";
-import { Button, Card, Modal } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styles from './Feature.module.scss';
 import ReactMarkdown from 'react-markdown';
+import CarouselGallary from '../CarouselGallary/CarouselGallary';
 
 type FeatureProps = {
-  summaryPath?: string;
-  detailsPath?: string;
-  img?: string;
-  demoLink?: string;
-  ghLink?: string;
+  content?: string;
+  images?: string[];
+  demo?: string;
+  github?: string;
 }
 
-export default function Feature({summaryPath, detailsPath, img="500x500.jpg", demoLink, ghLink}: FeatureProps) {
-  const [summary, setSummary] = useState('');
-  const [details, setDetails] = useState('');
-  const [showDetails, setShowDetails] = useState(false);
+export default function Feature({content, images=['500x500.jpg'], demo, github}: FeatureProps) {
+  const [contentText, setContentText] = useState('');
 
   useEffect(() => {
-    if(summaryPath) fetch(summaryPath).then(r => r.text()).then(text => setSummary(text));
-  }, [summaryPath]);
-
-  useEffect(() => {
-    if(detailsPath) fetch(detailsPath).then(r => r.text()).then(text => setDetails(text));
-  }, [detailsPath]);
-
-  const handleShowModal = () => setShowDetails(true);
-  const handleHideModal = () => setShowDetails(false);
+    if(content) fetch(content).then(r => r.text()).then(text => setContentText(text));
+  }, [content]);
 
   return (
     <Card className={styles.card}>
-      <img src={img} alt=""  className={`${styles.img} card-img-top`} />
+      <CarouselGallary images={images} />
       <div className={`${styles.body} card-body`}>
         <div className={styles.content}>
-          <ReactMarkdown>{summary}</ReactMarkdown>
+          <ReactMarkdown>{contentText}</ReactMarkdown>
         </div>
         <div className={styles.bottom}>
           {
-            demoLink  !== undefined &&
+            demo  !== undefined &&
             <a 
-              href={demoLink}
+              href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn btn-primary ms-2"
             >Demo</a>
           }
           {
-            ghLink  !== undefined &&
+            github  !== undefined &&
             <a 
-              href={ghLink}
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn btn-primary ms-2"
             >Github</a>
           }
-          {detailsPath !== undefined && <Button onClick={handleShowModal}>Details</Button>}
         </div>
       </div>
-      <Modal show={showDetails} onHide={handleHideModal} size="xl" centered>
-          <Modal.Header closeButton />
-          <Modal.Body>
-            <ReactMarkdown>{details}</ReactMarkdown>
-          </Modal.Body>
-      </Modal>
     </Card>
   );
 }

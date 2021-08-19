@@ -1,34 +1,34 @@
 type Website = {
-  summary?: string;
+  content?: string;
   details?: string;
-  img?: string;
-  demoLink?: string;
-  ghLink?: string;
+  images?: string[];
+  demo?: string;
+  github?: string;
 }
 
 const websites: Website[] = [
   {
-    summary: 'content/sav-summary.md',
-    details: 'content/sav-details.md',
-    img: 'content/sav.png',
-    demoLink: 'https://nimeji.github.io/sorting-algorithm-visualizer/',
-    ghLink: 'https://github.com/nimeji/sorting-algorithm-visualizer'
+    content: 'content/sav.md',
+    images: ['content/sav.png'],
+    demo: 'https://nimeji.github.io/sorting-algorithm-visualizer/',
+    github: 'https://github.com/nimeji/sorting-algorithm-visualizer'
   },
   {
-    summary: 'content/test.md',
-    img: '500x500.jpg',
+    content: 'content/portfolio.md',
+    github: 'https://github.com/nimeji/nimeji.github.io',
+    images: ['500x500.jpg'],
   },
   {
-    summary: 'content/test.md',
-    img: '500x500.jpg',
+    content: 'content/messenger.md',
+    images: ['content/messenger_1.png', 'content/messenger_2.png', 'content/messenger_3.png', 'content/messenger_4.png'],
   },
   {
-    summary: 'content/test.md',
-    img: '500x500.jpg',
+    content: 'content/test.md',
+    images: ['500x500.jpg'],
   },
   {
-    summary: 'content/test.md',
-    img: '500x500.jpg',
+    content: 'content/test.md',
+    images: ['500x500.jpg'],
   }
 ]
 
