@@ -1,0 +1,28 @@
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel {
+  cursor: pointer;
+}
+
+.gallaryContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
