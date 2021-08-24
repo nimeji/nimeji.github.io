@@ -21,6 +21,8 @@ const websites: Website[] = [
   {
     content: 'content/messenger.md',
     images: ['content/messenger_1.png', 'content/messenger_2.png', 'content/messenger_3.png', 'content/messenger_4.png'],
+    demo: 'https://nimeji.github.io/messenger-demo-frontend/',
+    github: 'https://github.com/nimeji/messenger-demo-frontend',
   },
   {
     content: 'content/test.md',
