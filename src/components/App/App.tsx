@@ -29,7 +29,7 @@ function App() {
           <Row>
             {
               websites.map((website, i) => (
-                <Col key={i} sm={12} md={6} xxl={4} className="py-2">
+                <Col key={i} sm={12} md={6} className="py-2">
                   <Feature content={website.content} images={website.images} demo={website.demo} github={website.github} />
                 </Col>
               ))
