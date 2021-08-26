@@ -10,7 +10,7 @@ const websites: Website[] = [
   {
     content: 'content/sav.md',
     images: ['content/sav.png'],
-    demo: 'https://nimeji.github.io/sorting-algorithm-visualizer/',
+    demo: 'https://sav.nimeji.com',
     github: 'https://github.com/nimeji/sorting-algorithm-visualizer'
   },
   {
@@ -21,17 +21,14 @@ const websites: Website[] = [
   {
     content: 'content/messenger.md',
     images: ['content/messenger_1.png', 'content/messenger_2.png', 'content/messenger_3.png', 'content/messenger_4.png'],
-    demo: 'https://nimeji.github.io/messenger-demo-frontend/',
+    demo: 'https://messenger-demo-frontend.nimeji.com',
     github: 'https://github.com/nimeji/messenger-demo-frontend',
   },
   {
     content: 'content/test.md',
     images: ['500x500.jpg'],
+    demo: 'https://pprl-demos-frontend.nimeji.com',
   },
-  {
-    content: 'content/test.md',
-    images: ['500x500.jpg'],
-  }
 ]
 
 export default websites;
