@@ -11,7 +11,7 @@ function App() {
       <Row>
         <Col xl={4} xxl={3} className="text-light pb-5">
           <h1>Max Schrodt</h1>
-          <p>Im an aspiring frontend developer from germany. I usually work with Typescript, React and SASS. I also have some experience using various UI/UX libraries like Bootstrap and MaterialUI. </p>
+          <p>Im an aspiring frontend developer from germany. I have experience working with Typescript, React, SASS and various UI/UX libraries like Bootstrap and MaterialUI.</p>
           <p>On this website you can find information on some of my previous projects.</p>
           <h4>Contact</h4>
           <div className={styles.FlexColumn}>
