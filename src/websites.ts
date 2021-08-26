@@ -9,13 +9,13 @@ type Website = {
 const websites: Website[] = [
   {
     content: 'content/sav.md',
-    images: ['content/sav.png'],
+    images: ['content/sav.jpg'],
     demo: 'https://sav.nimeji.com',
     github: 'https://github.com/nimeji/sorting-algorithm-visualizer'
   },
   {
     content: 'content/messenger.md',
-    images: ['content/messenger_1.png', 'content/messenger_2.png', 'content/messenger_3.png', 'content/messenger_4.png'],
+    images: ['content/messenger_1.jpg', 'content/messenger_2.jpg', 'content/messenger_3.jpg', 'content/messenger_4.jpg'],
     demo: 'https://messenger-demo-frontend.nimeji.com',
     github: 'https://github.com/nimeji/messenger-demo-frontend',
   },
@@ -28,7 +28,7 @@ const websites: Website[] = [
   {
     content: 'content/portfolio.md',
     github: 'https://github.com/nimeji/nimeji.github.io',
-    images: ['content/portfolio.png'],
+    images: ['content/portfolio.jpg'],
   },
 ]
 
