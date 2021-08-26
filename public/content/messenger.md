@@ -5,7 +5,7 @@ On the hypothetical website *chooseyourmessenger*, users search for their person
 
 This demonstration shows a possible use case of Privacy Preserving Record Linkage (PPRL). It shows the above concept in a simplified form and includes explanations of the various PPRL steps.
 
-The App Demo has the explanation videos removed and uses a Mock API.
+The App Demo has the explanation videos removed.
 
 ##### Technologies used
 Typescript, React, React-Spring, SASS

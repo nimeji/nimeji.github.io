@@ -14,20 +14,21 @@ const websites: Website[] = [
     github: 'https://github.com/nimeji/sorting-algorithm-visualizer'
   },
   {
-    content: 'content/portfolio.md',
-    github: 'https://github.com/nimeji/nimeji.github.io',
-    images: ['500x500.jpg'],
-  },
-  {
     content: 'content/messenger.md',
     images: ['content/messenger_1.png', 'content/messenger_2.png', 'content/messenger_3.png', 'content/messenger_4.png'],
     demo: 'https://messenger-demo-frontend.nimeji.com',
     github: 'https://github.com/nimeji/messenger-demo-frontend',
   },
   {
-    content: 'content/test.md',
-    images: ['500x500.jpg'],
+    content: 'content/pprl-demos.md',
+    images: ['content/pprl-demos_1.png', 'content/pprl-demos_2.png'],
     demo: 'https://pprl-demos-frontend.nimeji.com',
+    github: 'https://github.com/nimeji/pprl-demos-frontend',
+  },
+  {
+    content: 'content/portfolio.md',
+    github: 'https://github.com/nimeji/nimeji.github.io',
+    images: ['content/portfolio.png'],
   },
 ]
 
